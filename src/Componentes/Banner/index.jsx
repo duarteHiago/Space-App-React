@@ -8,13 +8,9 @@ const BannerEstilizado = styled.figure`
     align-items: center;
     min-height: 328px;
     margin: 0;
-    border-radius: 20px;
-    max-width: 65%;
+    border-radius: 18px;
+    max-width: 97%;
     background-size: cover;
-    position: relative;
-    left: 375px;
-    bottom: 300px;
-
 
 `
 const TituloEstilizado = styled.h1`

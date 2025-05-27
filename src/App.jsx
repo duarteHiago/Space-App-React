@@ -3,6 +3,9 @@ import EstilosGlobais from "./Componentes/EstilosGlobais"
 import Cabecalho from "./Componentes/Cabecalho"
 import BarraLateral from "./Componentes/BarraLateral"
 import Banner from "./Componentes/Banner"
+import Galeria from "./Componentes/Galeria"
+import fotos from "./fotos.json"
+import { useState } from "react"
 
 
 const FundoGradiente = styled.div`
@@ -11,15 +14,41 @@ const FundoGradiente = styled.div`
     min-height: 100vh;
 
 `
+const AppContainer = styled.div`
+  width: 1440px;
+  margin: 0 auto;
+  max-width: 100%;
 
-function App() {
+`
+const MainContainer = styled.main`
+  display: flex;
+  gap: 24px;
+`
+
+const ConteudoGaleria = styled.section`
+  display:flex;
+  flex-direction: column;
+  flex-grow: 1;
+`
+
+
+const App = () => {
+
+  const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos)
 
   return (
     <FundoGradiente>
       <EstilosGlobais />
-      <Cabecalho />
-      <BarraLateral />
-      <Banner texto="Banner do Alura Space" backgroundImage="/src/assets/banner.png" />
+      <AppContainer>
+        <Cabecalho />
+        <MainContainer>
+          <BarraLateral />
+          <ConteudoGaleria>
+            <Banner texto="Banner do Alura Space" backgroundImage="/src/assets/banner.png" />
+            <Galeria fotos={fotosDaGaleria} />
+          </ConteudoGaleria>
+        </MainContainer>
+      </AppContainer>
     </FundoGradiente>
   )
 }
