@@ -23,7 +23,7 @@ const ImagensContainer = styled.ul`
     list-style: none;
 `;
 
-const Galeria = ({fotos = []}) => {
+const Galeria = ({fotos = [], aoFotoSelecionada}) => {
     return (
         <>
             <Tags />
@@ -33,7 +33,7 @@ const Galeria = ({fotos = []}) => {
                     <ImagensContainer>
                         {fotos.map(foto => (
                             <li key={foto.id}>
-                                <Imagem foto={foto} />
+                                <Imagem foto={foto} aoZoomSelecionado={aoFotoSelecionada}/>
                             </li>
                         ))}
                     </ImagensContainer>
