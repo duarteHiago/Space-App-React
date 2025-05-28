@@ -15,7 +15,7 @@ Veja abaixo algumas capturas de tela da interface da aplicação:
 </p>
 
 <p align="center">
-  <img src="/public/imagens-portfolio/Screenshot 2025-05-28 161740.png" alt="Detalhe de uma imagem espacial" width="700"/>
+  <img src="/public/imagens-portfolio/Screenshot 2025-05-28 161728" alt="Detalhe de uma imagem espacial" width="700"/>
 </p>
 
 > As imagens acima são apenas exemplos. A interface pode sofrer alterações conforme o projeto evolui.
